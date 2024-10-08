@@ -10,6 +10,7 @@ class Fixed
 		int					_fixed_pointer_num;
 	public:
 		Fixed();
+		Fixed(const int num);
 		Fixed(const Fixed &obj);
 		~Fixed();
 		Fixed	&operator = (const Fixed &a);

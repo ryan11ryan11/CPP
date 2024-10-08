@@ -18,6 +18,11 @@ Fixed &Fixed::operator = (const Fixed &other)
 	return (*this);
 }
 
+Fixed::Fixed(const int num)
+{
+	return ()
+}
+
 Fixed::Fixed(const Fixed &obj)
 {
 	std::cout << "Copy constructor called." << std::endl;
