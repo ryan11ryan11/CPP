@@ -18,10 +18,21 @@ Fixed &Fixed::operator = (const Fixed &other)
 	return (*this);
 }
 
+std::ostream	&operator<<(std::ostream &out, const Fixed &self)
+{
+	int	
+}
+
 Fixed::Fixed(const int num)
 {
-	return ()
+	this->_fixed_pointer_num = num << _fractional_bit;
 }
+
+Fixed::Fixed(const float num)
+{
+	_fixed_pointer_num = roundf(num * (1 << _fractional_bit));
+}
+
 
 Fixed::Fixed(const Fixed &obj)
 {
@@ -43,4 +54,14 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
 	this->_fixed_pointer_num = raw;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return (static_cast<float>(_fixed_pointer_num / (1 << _fractional_bit)));
+}
+
+int		Fixed::toInt(void) const
+{
+	return (static_cast<int>(_fixed_pointer_num >> _fractional_bit));
 }
