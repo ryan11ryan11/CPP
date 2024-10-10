@@ -19,7 +19,6 @@ class Fixed
 		Fixed	&operator = (const Fixed &a);
 		int		getRawBits(void) const;
 		void	setRawBits( int const raw );
-		void	print_all();
 		float	toFloat(void) const;
 		int		toInt( void ) const;
 		friend 	std::ostream	&operator<<(std::ostream &out, const Fixed &self);
